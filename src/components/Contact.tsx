@@ -147,8 +147,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-white py-24 md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section id="contact" className="section-wash bg-white py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative">
         <div className="grid min-w-0 gap-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
           <div className="min-w-0">
             <p className="eyebrow">{copy.eyebrow}</p>
@@ -160,8 +160,8 @@ export default function Contact() {
             <p className="mt-7 max-w-xl text-base leading-8 text-ink/60">{copy.intro}</p>
 
             <div className="mt-10 grid min-w-0 gap-4">
-              <div className="group flex items-center gap-4 rounded-md border border-ink/10 bg-paper p-5 transition-colors hover:border-brass/50 hover:bg-white">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-ink text-white transition-colors group-hover:bg-sea">
+              <div className="elevated-card group flex items-center gap-4 rounded-md p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brass/50">
+                <span className="service-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-white">
                   <Phone className="h-5 w-5" />
                 </span>
                 <span>
@@ -177,8 +177,8 @@ export default function Contact() {
                 </span>
               </div>
 
-              <a href="mailto:zhangjian@hzlawcn.com" className="group flex items-center gap-4 rounded-md border border-ink/10 bg-paper p-5 transition-colors hover:border-brass/50 hover:bg-white">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-ink text-white transition-colors group-hover:bg-sea">
+              <a href="mailto:zhangjian@hzlawcn.com" className="elevated-card group flex items-center gap-4 rounded-md p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brass/50">
+                <span className="service-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-white">
                   <Mail className="h-5 w-5" />
                 </span>
                 <span className="min-w-0">
@@ -187,8 +187,8 @@ export default function Contact() {
                 </span>
               </a>
 
-              <div className="flex items-center gap-4 rounded-md border border-ink/10 bg-paper p-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-sea text-white">
+              <div className="elevated-card flex items-center gap-4 rounded-md p-5">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-sea text-white shadow-[0_14px_30px_rgba(47,111,115,0.22)]">
                   <MessageCircle className="h-5 w-5" />
                 </span>
                 <span>
@@ -197,8 +197,8 @@ export default function Contact() {
                 </span>
               </div>
 
-              <div className="flex min-w-0 items-start gap-4 rounded-md border border-ink/10 bg-paper p-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-brass text-white">
+              <div className="elevated-card flex min-w-0 items-start gap-4 rounded-md p-5">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-brass text-white shadow-[0_14px_30px_rgba(183,137,52,0.22)]">
                   <MapPin className="h-5 w-5" />
                 </span>
                 <span className="min-w-0">
@@ -211,7 +211,7 @@ export default function Contact() {
           </div>
 
           <div className="grid min-w-0 gap-6">
-            <form onSubmit={handleSubmit} className="min-w-0 rounded-md border border-ink/10 bg-paper p-6 md:p-8">
+            <form onSubmit={handleSubmit} className="elevated-card min-w-0 rounded-md p-6 md:p-8">
               <div className="grid min-w-0 gap-5 md:grid-cols-2">
                 <label className="grid min-w-0 gap-2 text-sm font-medium text-ink">
                   {copy.labels.name}
@@ -219,7 +219,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={(event) => updateField('name', event.target.value)}
                     required
-                    className="h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass"
+                    className="form-field h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass focus:shadow-[0_0_0_3px_rgba(183,137,52,0.12)]"
                     placeholder={copy.placeholders.name}
                   />
                 </label>
@@ -229,7 +229,7 @@ export default function Contact() {
                     value={form.phone}
                     onChange={(event) => updateField('phone', event.target.value)}
                     required
-                    className="h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass"
+                    className="form-field h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass focus:shadow-[0_0_0_3px_rgba(183,137,52,0.12)]"
                     placeholder={copy.placeholders.phone}
                   />
                 </label>
@@ -241,7 +241,7 @@ export default function Contact() {
                   <input
                     value={form.company}
                     onChange={(event) => updateField('company', event.target.value)}
-                    className="h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass"
+                    className="form-field h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass focus:shadow-[0_0_0_3px_rgba(183,137,52,0.12)]"
                     placeholder={copy.placeholders.company}
                   />
                 </label>
@@ -250,7 +250,7 @@ export default function Contact() {
                   <select
                     value={form.matter || copy.matterOptions[0]}
                     onChange={(event) => updateField('matter', event.target.value)}
-                    className="h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass"
+                    className="form-field h-12 min-w-0 rounded-md border border-ink/10 bg-white px-4 text-sm outline-none transition-colors focus:border-brass focus:shadow-[0_0_0_3px_rgba(183,137,52,0.12)]"
                   >
                     {copy.matterOptions.map((option) => (
                       <option key={option}>{option}</option>
@@ -266,21 +266,21 @@ export default function Contact() {
                   onChange={(event) => updateField('message', event.target.value)}
                   required
                   rows={6}
-                  className="min-w-0 resize-none rounded-md border border-ink/10 bg-white px-4 py-3 text-sm leading-7 outline-none transition-colors focus:border-brass"
+                  className="form-field min-w-0 resize-none rounded-md border border-ink/10 bg-white px-4 py-3 text-sm leading-7 outline-none transition-colors focus:border-brass focus:shadow-[0_0_0_3px_rgba(183,137,52,0.12)]"
                   placeholder={copy.placeholders.message}
                 />
               </label>
 
               <button
                 type="submit"
-                className="mt-6 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-md bg-ink px-5 text-sm font-semibold text-white transition-colors hover:bg-sea md:w-auto"
+                className="mt-6 inline-flex h-[52px] w-full items-center justify-center gap-2 rounded-md bg-ink px-5 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(17,24,39,0.18)] transition-all hover:-translate-y-0.5 hover:bg-sea md:w-auto"
               >
                 <Send className="h-4 w-4" />
                 {copy.labels.submit}
               </button>
             </form>
 
-            <div className="min-w-0 rounded-md border border-ink/10 bg-ink p-6 text-white md:p-8">
+            <div className="fine-frame min-w-0 rounded-md bg-ink p-6 text-white md:p-8">
               <div className="flex items-center gap-3">
                 <ClipboardList className="h-5 w-5 text-brass-light" />
                 <p className="font-serif text-2xl font-semibold">{copy.checklistTitle}</p>

@@ -73,8 +73,9 @@ export default function Credentials() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section className="bg-ink py-24 text-white md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section className="relative overflow-hidden bg-ink py-24 text-white md:py-28 lg:py-32">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(135deg,rgba(183,137,52,0.14),transparent_34%,transparent_70%,rgba(47,111,115,0.18))] bg-[length:88px_88px,88px_88px,100%_100%]" />
+      <div className="section-shell relative">
         <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -99,9 +100,9 @@ export default function Credentials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: index * 0.05 }}
-                className="grid gap-5 border-b border-white/20 py-7 md:grid-cols-[3.25rem_1fr]"
+                className="grid gap-5 border-b border-white/20 py-7 transition-colors hover:border-brass-light/50 md:grid-cols-[3.25rem_1fr]"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 bg-white/10 text-brass-light">
+                <div className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 bg-white/[0.12] text-brass-light shadow-[0_16px_40px_rgba(0,0,0,0.18)]">
                   {icons[index]}
                 </div>
                 <div>

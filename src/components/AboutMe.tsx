@@ -133,8 +133,8 @@ export default function AboutMe() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section id="about" className="bg-paper py-24 md:py-28 lg:py-32">
-      <div className="section-shell grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+    <section id="about" className="section-wash bg-paper py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -163,7 +163,7 @@ export default function AboutMe() {
               ))}
             </div>
 
-            <div className="mt-10 overflow-hidden rounded-md border border-ink/10 bg-white shadow-soft">
+            <div className="elevated-card mt-10 overflow-hidden rounded-md">
               <img src={portrait} alt={copy.portraitAlt} className="aspect-[4/5] w-full object-cover object-[center_top]" />
               <div className="border-t border-ink/10 p-5">
                 <p className="font-serif text-2xl font-semibold text-ink">{copy.portraitName}</p>
@@ -219,7 +219,7 @@ export default function AboutMe() {
               </div>
             </div>
 
-            <div className="rounded-md border border-ink/10 bg-white p-6">
+            <div className="elevated-card rounded-md p-6">
               <p className="text-sm font-medium text-brass">{copy.coreLabel}</p>
               <p className="mt-5 font-serif text-2xl font-semibold leading-snug text-ink">{copy.coreTitle}</p>
               <p className="mt-5 text-sm leading-7 text-ink/60">{copy.coreDesc}</p>

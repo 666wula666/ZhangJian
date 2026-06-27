@@ -18,7 +18,7 @@
 
   body {
     margin: 0;
-    background: #f5f7f6;
+    background: #f3f5f2;
     color: #111827;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
     letter-spacing: 0;
@@ -44,10 +44,107 @@
   }
 
   .eyebrow {
-    @apply text-sm font-semibold text-brass;
+    @apply inline-flex items-center gap-3 text-sm font-semibold text-brass;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 2.25rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(183, 137, 52, 0), rgba(183, 137, 52, 0.95));
+  }
+
+  .site-surface {
+    background:
+      linear-gradient(90deg, rgba(17, 24, 39, 0.025) 1px, transparent 1px),
+      linear-gradient(rgba(17, 24, 39, 0.02) 1px, transparent 1px),
+      linear-gradient(180deg, #f6f8f5 0%, #eef3f0 48%, #f7f8f5 100%);
+    background-size: 92px 92px, 92px 92px, 100% 100%;
+  }
+
+  .section-wash {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-wash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(120deg, rgba(183, 137, 52, 0.07), transparent 24%, transparent 76%, rgba(47, 111, 115, 0.08)),
+      linear-gradient(rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 9rem;
+  }
+
+  .elevated-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 252, 250, 0.94)),
+      linear-gradient(135deg, rgba(217, 183, 98, 0.14), transparent 34%);
+    box-shadow: 0 22px 70px rgba(17, 24, 39, 0.09);
+  }
+
+  .elevated-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: linear-gradient(90deg, #b78934, rgba(217, 183, 98, 0.2), transparent);
+  }
+
+  .elevated-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 252, 250, 0.96)),
+      linear-gradient(135deg, rgba(183, 137, 52, 0.12), transparent 42%);
+    box-shadow: 0 18px 52px rgba(17, 24, 39, 0.07);
+  }
+
+  .service-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 1.25rem 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(183, 137, 52, 0.6), transparent);
+    opacity: 0;
+    transition: opacity 260ms ease;
+  }
+
+  .service-card:hover::after {
+    opacity: 1;
+  }
+
+  .service-icon {
+    background:
+      linear-gradient(145deg, #111827, #1f2a38),
+      linear-gradient(135deg, rgba(217, 183, 98, 0.28), transparent);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 14px 30px rgba(17, 24, 39, 0.18);
+  }
+
+  .gold-button {
+    background: linear-gradient(135deg, #c79a42, #9b7229 62%, #d9b762);
+    box-shadow: 0 18px 48px rgba(151, 111, 40, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+
+  .gold-button:hover {
+    background: linear-gradient(135deg, #d2a84f, #966f28 62%, #e2c474);
+  }
+
+  .form-field {
+    box-shadow: inset 0 1px 0 rgba(17, 24, 39, 0.03);
   }
 }
-
 @layer utilities {
   .marine-grid {
     background-image:
@@ -63,7 +160,7 @@
   }
 
   .shadow-soft {
-    box-shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
+    box-shadow: 0 20px 60px rgba(17, 24, 39, 0.09);
   }
 
   .luxury-sweep {
@@ -84,5 +181,11 @@
   .premium-card > * {
     position: relative;
     z-index: 2;
+  }
+
+  .fine-frame {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+      0 36px 110px rgba(0, 0, 0, 0.38);
   }
 }

@@ -116,8 +116,8 @@ export default function Services() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section id="services" className="bg-paper py-24 md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section id="services" className="section-wash bg-paper py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative">
         <div className="mb-14 grid gap-8 lg:grid-cols-[0.8fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">{copy.eyebrow}</p>
@@ -138,10 +138,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: index * 0.04 }}
-              className="group rounded-md border border-ink/10 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brass/50"
+              className="service-card group rounded-md p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brass/50 hover:shadow-[0_26px_80px_rgba(17,24,39,0.12)]"
             >
               <div className="flex items-center justify-between gap-5">
-                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-ink text-white transition-colors group-hover:bg-sea">
+                <div className="service-icon flex h-11 w-11 items-center justify-center rounded-md text-white transition-transform duration-300 group-hover:-translate-y-0.5">
                   {icons[index]}
                 </div>
                 <span className="font-serif text-3xl text-ink/20">{String(index + 1).padStart(2, '0')}</span>
@@ -150,7 +150,7 @@ export default function Services() {
               <p className="mt-4 min-h-[9.5rem] text-sm leading-7 text-ink/60">{item.desc}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
-                  <span key={tag} className="rounded-sm border border-ink/10 px-2.5 py-1 text-xs text-ink/60">
+                  <span key={tag} className="rounded-sm border border-ink/10 bg-white/70 px-2.5 py-1 text-xs text-ink/60">
                     {tag}
                   </span>
                 ))}

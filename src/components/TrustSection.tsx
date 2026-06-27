@@ -79,8 +79,8 @@ export default function TrustSection() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section className="bg-paper py-24 md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section className="section-wash bg-paper py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
@@ -104,9 +104,9 @@ export default function TrustSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
-                  className="rounded-md border border-ink/10 bg-white p-5"
+                  className="elevated-card rounded-md p-5"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-brass text-white">{icons[index]}</div>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-brass text-white shadow-[0_14px_30px_rgba(183,137,52,0.22)]">{icons[index]}</div>
                   <h3 className="mt-5 font-serif text-xl font-semibold text-ink">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-ink/60">{item.desc}</p>
                 </motion.article>
@@ -119,7 +119,7 @@ export default function TrustSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
-            className="rounded-md bg-ink p-6 text-white md:p-8 lg:p-10"
+            className="fine-frame rounded-md bg-ink p-6 text-white md:p-8 lg:p-10"
           >
             <p className="text-sm font-medium text-brass-light">{copy.pathLabel}</p>
             <div className="mt-7 divide-y divide-white/20">

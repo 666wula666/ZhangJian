@@ -94,8 +94,8 @@ function App() {
 
   return (
     <LanguageProvider value={lang}>
-      <div className="min-h-screen bg-paper text-ink antialiased selection:bg-brass selection:text-white">
-        <nav className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-xl">
+      <div className="site-surface min-h-screen text-ink antialiased selection:bg-brass selection:text-white">
+        <nav className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-paper/90 shadow-[0_12px_40px_rgba(17,24,39,0.08)] backdrop-blur-xl">
           <div className="section-shell flex h-20 items-center justify-between">
             <a href="#home" className="flex items-center gap-3" aria-label={copy.homeAria}>
               <span className="flex h-11 w-11 items-center justify-center rounded-md border border-ink bg-ink text-sm font-semibold text-white">

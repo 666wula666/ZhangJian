@@ -77,8 +77,8 @@ export default function Advantage() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section id="advantage" className="border-y border-ink/10 bg-white py-24 md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section id="advantage" className="section-wash border-y border-ink/10 bg-white py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative">
         <div className="grid gap-8 border-b border-ink/10 pb-12 md:grid-cols-4">
           {copy.stats.map((item, index) => (
             <motion.div
@@ -119,9 +119,9 @@ export default function Advantage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.65, delay: index * 0.06 }}
-                className="rounded-md border border-ink/10 bg-paper p-6 transition-colors hover:border-brass/50 hover:bg-white"
+                className="elevated-card rounded-md p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brass/50"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-md bg-sea text-white">{icons[index]}</div>
+                <div className="service-icon flex h-10 w-10 items-center justify-center rounded-md text-white">{icons[index]}</div>
                 <h3 className="mt-6 font-serif text-2xl font-semibold text-ink">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-ink/60">{item.desc}</p>
               </motion.article>

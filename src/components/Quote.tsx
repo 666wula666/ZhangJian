@@ -17,14 +17,14 @@ export default function Quote() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section className="border-b border-ink/10 bg-white py-14 md:py-20">
-      <div className="section-shell">
+    <section className="section-wash border-b border-ink/10 bg-white py-14 md:py-20">
+      <div className="section-shell relative">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
-          className="grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:items-end"
+          className="elevated-card grid gap-8 rounded-md p-6 md:grid-cols-[0.72fr_1.28fr] md:items-end md:p-8"
         >
           <p className="text-sm font-medium text-brass">{copy.eyebrow}</p>
           <blockquote className="font-serif text-3xl font-semibold leading-snug text-ink md:text-4xl lg:text-5xl">

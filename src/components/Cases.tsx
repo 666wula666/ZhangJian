@@ -92,8 +92,8 @@ export default function Cases() {
   const copy = pick(lang, copyByLang)
 
   return (
-    <section className="border-y border-ink/10 bg-white py-24 md:py-28 lg:py-32">
-      <div className="section-shell">
+    <section className="section-wash border-y border-ink/10 bg-white py-24 md:py-28 lg:py-32">
+      <div className="section-shell relative">
         <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">{copy.eyebrow}</p>
@@ -106,7 +106,7 @@ export default function Cases() {
           <p className="max-w-2xl text-base leading-8 text-ink/60 lg:justify-self-end">{copy.intro}</p>
         </div>
 
-        <div className="mb-8 overflow-hidden rounded-md border border-ink/10 bg-ink shadow-soft">
+        <div className="mb-8 overflow-hidden rounded-md border border-ink/10 bg-ink shadow-[0_28px_85px_rgba(17,24,39,0.18)]">
           <div className="grid lg:grid-cols-[0.92fr_1.08fr]">
             <div className="relative min-h-[280px]">
               <img src={evidenceImage} alt={copy.imageAlt} className="absolute inset-0 h-full w-full object-cover" />
@@ -135,7 +135,7 @@ export default function Cases() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: index * 0.06 }}
-              className="group rounded-md border border-ink/10 bg-paper p-6 transition-colors hover:border-brass/50 hover:bg-white"
+              className="service-card group rounded-md p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brass/50 hover:shadow-[0_26px_80px_rgba(17,24,39,0.12)]"
             >
               <div className="flex items-center justify-between gap-6">
                 <span className="font-serif text-4xl text-brass">{String(index + 1).padStart(2, '0')}</span>

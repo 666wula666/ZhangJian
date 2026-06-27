@@ -59,7 +59,7 @@ export default function Hero() {
     <section id="home" className="relative isolate overflow-hidden bg-ink pt-20 text-white">
       <img src={heroImage} alt="" className="absolute inset-0 -z-30 h-full w-full object-cover object-center" />
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(17,24,39,0.98)_0%,rgba(17,24,39,0.9)_42%,rgba(17,24,39,0.62)_68%,rgba(17,24,39,0.82)_100%)]" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_28%,rgba(217,183,98,0.2),transparent_26%),radial-gradient(circle_at_84%_18%,rgba(47,111,115,0.28),transparent_28%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(217,183,98,0.18),transparent_30%,transparent_68%,rgba(47,111,115,0.2)),linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[length:100%_100%,88px_88px,88px_88px]" />
       <div className="luxury-sweep absolute inset-x-0 top-0 -z-10 h-px" />
 
       <div className="section-shell relative grid min-h-[82svh] gap-12 py-16 md:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
@@ -68,7 +68,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-8 inline-flex items-center gap-3 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 shadow-[0_18px_55px_rgba(0,0,0,0.22)] backdrop-blur"
+            className="mb-8 inline-flex items-center gap-3 rounded-md border border-white/20 bg-white/[0.12] px-4 py-2 text-sm text-white/80 shadow-[0_18px_55px_rgba(0,0,0,0.26)] backdrop-blur"
           >
             <Anchor className="h-4 w-4 text-brass-light" />
             {copy.badge}
@@ -110,7 +110,7 @@ export default function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             {copy.strengths.map((item) => (
-              <span key={item} className="rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white/75 backdrop-blur">
+              <span key={item} className="rounded-md border border-white/20 bg-white/[0.12] px-3 py-2 text-sm text-white/75 shadow-[0_10px_28px_rgba(0,0,0,0.16)] backdrop-blur">
                 {item}
               </span>
             ))}
@@ -124,7 +124,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group inline-flex h-[54px] items-center justify-center gap-2 rounded-md bg-brass px-7 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(183,137,52,0.28)] transition-all hover:-translate-y-0.5 hover:bg-brass-dark"
+              className="gold-button group inline-flex h-[54px] items-center justify-center gap-2 rounded-md px-7 text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
             >
               <ShieldCheck className="h-4 w-4" />
               {copy.primaryCta}
@@ -132,7 +132,7 @@ export default function Hero() {
             </a>
             <a
               href="tel:15861989012"
-              className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-md border border-white/20 bg-white/10 px-5 py-3 text-center text-sm font-semibold leading-6 text-white shadow-[0_18px_45px_rgba(0,0,0,0.18)] backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:px-7"
+              className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-md border border-white/25 bg-white/[0.12] px-5 py-3 text-center text-sm font-semibold leading-6 text-white shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:px-7"
             >
               <PhoneCall className="h-4 w-4" />
               <span>158 6198 9012 / 183 0193 8689</span>
@@ -143,7 +143,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.38 }}
-            className="mt-12 grid max-w-3xl grid-cols-3 overflow-hidden rounded-md border border-white/20 bg-white/10 backdrop-blur-md"
+            className="mt-12 grid max-w-3xl grid-cols-3 overflow-hidden rounded-md border border-white/20 bg-white/[0.12] shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-md"
           >
             {copy.facts.map((fact) => (
               <div key={fact.label} className="border-r border-white/20 p-4 last:border-r-0 sm:p-5">
@@ -161,7 +161,7 @@ export default function Hero() {
           className="relative mx-auto w-full max-w-[470px] lg:ml-auto"
         >
           <div className="absolute -inset-3 rounded-full bg-brass/20 blur-3xl sm:-inset-8" />
-          <div className="premium-card relative overflow-hidden rounded-md border border-white/20 bg-white/10 p-3 shadow-[0_38px_110px_rgba(0,0,0,0.46)] backdrop-blur-xl">
+          <div className="premium-card fine-frame relative overflow-hidden rounded-md border border-white/20 bg-white/[0.12] p-3 backdrop-blur-xl">
             <div className="relative overflow-hidden rounded-sm border border-white/20 bg-ink">
               <img
                 src={portrait}
