@@ -65,4 +65,24 @@
   .shadow-soft {
     box-shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
   }
+
+  .luxury-sweep {
+    background: linear-gradient(90deg, transparent, rgba(217, 183, 98, 0.85), transparent);
+  }
+
+  .premium-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.24), transparent 22%),
+      linear-gradient(315deg, rgba(217, 183, 98, 0.18), transparent 30%);
+    z-index: 1;
+  }
+
+  .premium-card > * {
+    position: relative;
+    z-index: 2;
+  }
 }
