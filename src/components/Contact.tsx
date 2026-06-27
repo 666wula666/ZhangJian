@@ -57,7 +57,7 @@ const copyByLang = {
       message: '案件简述',
     },
     checklistTitle: '初次沟通可准备',
-    checklist: ['合同、协议、订单、保单等基础文件', '付款凭证、对账单、往来函件或聊天记录', '事故照片、检验报告、维修记录或技术资料', '裁判文书、保全材料、执行线索、损失清单'],
+    checklist: ['合同、协议、订单、保单、提单等基础文件', '付款凭证、对账单、往来函件或聊天记录', '事故照片、检验报告、维修记录或技术资料', '裁判文书、保全材料、执行线索、损失清单'],
     disclaimer: '本网站展示内容仅用于了解律师服务方向，不构成针对具体案件的正式法律意见。正式意见以委托后结合完整材料出具为准。',
   },
   en: {
@@ -107,7 +107,7 @@ const copyByLang = {
       message: 'Case Summary',
     },
     checklistTitle: 'Useful Materials for First Discussion',
-    checklist: ['Contracts, agreements, orders, policies and base documents', 'Payment evidence, reconciliations, correspondence or chat records', 'Accident photos, survey reports, repair records or technical materials', 'Judgments, preservation materials, enforcement clues and loss lists'],
+    checklist: ['Contracts, agreements, orders, policies, bills of lading and base documents', 'Payment evidence, reconciliations, correspondence or chat records', 'Accident photos, survey reports, repair records or technical materials', 'Judgments, preservation materials, enforcement clues and loss lists'],
     disclaimer:
       'The content on this website is for understanding service areas only and does not constitute formal legal advice for any specific matter. Formal opinions should be based on complete materials after engagement.',
   },
